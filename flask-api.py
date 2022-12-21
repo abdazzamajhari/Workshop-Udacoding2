@@ -19,16 +19,16 @@ def home():
         result = model(val)
         print(result)
 
-        # API
-        res = {
-            "status":200, 
-            "msg":"ok", 
-            "input":val,
-            "predict":result[0]
-            }
-        return jsonify(res)
+        ## API
+        # res = {
+            # "status":200, 
+            # "msg":"ok", 
+            # "input":val,
+            # "predict":result[0]
+            # }
+        # return jsonify(res)
 
-        # return render_template('home.html', result = result)
+        return render_template('home.html', result = result)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
